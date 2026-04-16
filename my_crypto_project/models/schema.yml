@@ -5,20 +5,14 @@ models:
     columns:
       - name: coin_id
         tests:
-          - not_null  # Kiểm tra xem có dòng nào bị trống ID không
+          - not_null
 
   - name: fct_crypto_prices
     columns:
       - name: coin_id
         tests:
-          - unique    # Ở tầng Silver, ID không được phép trùng (vì ta đã deduplicate)
+          - unique
           - not_null
       - name: symbol
         tests:
           - not_null
-      - name: price_usd
-        tests:
-          - accepted_values:
-              values: [0]
-              quote: false
-              # Ở đây ta có thể dùng custom test nhưng tạm thời check đơn giản

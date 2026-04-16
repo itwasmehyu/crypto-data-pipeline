@@ -1,0 +1,7 @@
+my_crypto_project:
+  outputs:
+    dev:
+      type: duckdb
+      # path: /home/huynguyen/de_projects/crypto_pipeline/crypto_data.db # Đường dẫn tuyệt đối đến file db
+      path: /opt/airflow/data/crypto_data.db
+  target: dev

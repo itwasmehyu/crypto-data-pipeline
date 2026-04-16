@@ -3,6 +3,6 @@ version: 2
 sources:
   - name: external_source
     meta:
-      external_location: "/home/huynguyen/de_projects/crypto_pipeline/data/raw_crypto_*.csv"
+      external_location: "/opt/airflow/data/raw_crypto_*.csv" 
     tables:
       - name: raw_crypto
