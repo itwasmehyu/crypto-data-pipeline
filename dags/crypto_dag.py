@@ -12,8 +12,10 @@ default_args = {
 with DAG(
     'crypto_daily_pipeline',
     default_args=default_args,
-    schedule_interval='@hourly',
-    catchup=False
+    description='A pipeline to fetch crypto data and run dbt',
+    schedule_interval='*/15 * * * *', # Chạy vào các phút: 0, 15, 30, 45 mỗi giờ
+    start_date=datetime(2025, 12, 1),
+    catchup=False,
 ) as dag:
 
     task_fetch_data = BashOperator(

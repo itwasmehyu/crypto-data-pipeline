@@ -29,3 +29,30 @@ venv/
 .DS_Store
 .vscode/
 .idea/
+
+# --- Python & Virtual Env ---
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# --- Streamlit ---
+.streamlit/
+# Nếu bạn có dùng secrets.toml của streamlit thì càng phải ignore
+.streamlit/secrets.toml
+
+# --- Data & DB (Cực kỳ quan trọng, đừng để file .db lên GitHub) ---
+data/*.db
+data/*.csv
+data/crypto_data.db*
+
+# --- dbt ---
+my_crypto_project/target/
+my_crypto_project/dbt_packages/
+my_crypto_project/logs/
+
+# --- Airflow ---
+logs/
+airflow.cfg
+webserver_config.py
+*.pid
