@@ -57,3 +57,14 @@ Dự án áp dụng kiến trúc **Medallion Architecture** (Bronze - Silver - G
 * Truy cập giao diện Airflow: http://localhost:8080 (Tài khoản: airflow / Mật khẩu: airflow).
 * Tìm DAG có tên crypto_daily_pipeline.
 * Gạt nút Pause/Unpause sang màu xanh để kích hoạt Pipeline.
+
+## Key Learing
+* Troubleshooting trong môi trường Docker: Giải quyết triệt để lỗi Command not found (127) bằng cách làm chủ biến môi trường PATH và hiểu rõ cơ chế cô lập của container.
+
+* Quản lý đường dẫn (Path Mapping): Hiểu cách ánh xạ (Volume mapping) giữa máy thật (Ubuntu) và Docker để đảm bảo dữ liệu, logs và cấu hình dbt luôn đồng bộ và bền vững.
+
+* Kiểm soát chất lượng dữ liệu (Data Quality): Sử dụng dbt test để tự động hóa việc kiểm tra tính toàn vẹn của dữ liệu (Unique, Not-null, Accepted values), giúp phát hiện lỗi ngay tại tầng biến đổi trước khi dữ liệu đi vào kho.
+
+* Tư duy Orchestration: Cách thiết lập sự phụ thuộc giữa các task (Dependencies) trong Airflow để xây dựng một luồng dữ liệu tự phục hồi (Self-healing) thông qua cơ chế Retry.
+
+* Modern Data Stack: Kết hợp linh hoạt các công cụ mã nguồn mở mạnh mẽ nhất hiện nay như DuckDB, dbt và Airflow để tạo ra một hệ thống ELT gọn nhẹ nhưng chuyên nghiệp.
